@@ -43,7 +43,7 @@
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ContactService.cs" />
-    <Compile Include="ViewModels\FirstViewModel.cs" />
+    <Compile Include="ViewModels\ContactsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Cirrious.CrossCore">
