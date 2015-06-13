@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using Core.Models;
 using Newtonsoft.Json;
@@ -9,6 +10,7 @@ namespace Core.Services
     public interface IContactService
     {
         IEnumerable<Contact> GetAll();
+        Contact Get(int contactId);
     }
 
     public class ContactService : IContactService
@@ -23,6 +25,11 @@ namespace Core.Services
             {
                 return serializer.Deserialize<IEnumerable<Contact>>(jsonTextReader);
             }
-        } 
+        }
+
+        public Contact Get(int contactId)
+        {
+            return GetAll().FirstOrDefault(x => x.Id == contactId);
+        }
     }
 }

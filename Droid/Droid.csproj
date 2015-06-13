@@ -78,6 +78,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="SplashScreen.cs" />
+    <Compile Include="Views\ContactDetailsView.cs" />
     <Compile Include="Views\ContactsView.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -89,6 +90,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\ContactTemplate.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ContactDetailsView.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

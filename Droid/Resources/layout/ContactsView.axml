@@ -7,6 +7,6 @@
     <MvxListView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        local:MvxBind="ItemsSource Contacts"
+        local:MvxBind="ItemsSource Contacts; ItemClick OpenContactCommand"
         local:MvxItemTemplate="@layout/contacttemplate" />
 </LinearLayout>
