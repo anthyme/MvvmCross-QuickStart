@@ -1,0 +1,9 @@
+﻿[ 
+    {"id": 1, "firstname": "Bob", "lastname": "Dylan", "phoneNumber": "+331234567890" },
+    {"id": 2, "firstname": "John", "lastname": "Doe", "phoneNumber": "+331234567890" },
+    {"id": 3, "firstname": "Roger", "lastname": "Dupont", "phoneNumber": "+331234567890" },
+    {"id": 4, "firstname": "Robert", "lastname": "Dupond", "phoneNumber": "+331234567890" },
+    {"id": 5, "firstname": "Jean-Jacques", "lastname": "Rousseau", "phoneNumber": "+331234567890" },
+    {"id": 6, "firstname": "Robert", "lastname": "Doisneau", "phoneNumber": "+331234567890" },
+    {"id": 7, "firstname": "Jacques-Yves", "lastname": "Cousteau", "phoneNumber": "+331234567890" }
+]
