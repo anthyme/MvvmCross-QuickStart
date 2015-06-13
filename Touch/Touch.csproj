@@ -89,10 +89,15 @@
     <Compile Include="LinkerPleaseInclude.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Setup.cs" />
+    <Compile Include="Views\ContactDetailsView.cs" />
+    <Compile Include="Views\ContactDetailsView.designer.cs">
+      <DependentUpon>ContactDetailsView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\ContactsView.cs" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
+    <InterfaceDefinition Include="Views\ContactDetailsView.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h@2x.png" />
