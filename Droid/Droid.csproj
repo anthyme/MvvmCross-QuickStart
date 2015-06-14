@@ -88,6 +88,7 @@
     <Compile Include="SplashScreen.cs" />
     <Compile Include="Views\ContactDetailsView.cs" />
     <Compile Include="Views\ContactsView.cs" />
+    <Compile Include="Views\ShellView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -103,6 +104,7 @@
     <AndroidResource Include="Resources\layout\ContactDetailsView.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\ShellView.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />

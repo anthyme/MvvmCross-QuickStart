@@ -11,7 +11,7 @@ namespace Core
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 				
-            RegisterAppStart<ViewModels.ContactsViewModel>();
+            RegisterAppStart<ViewModels.ShellViewModel>();
         }
     }
 }
