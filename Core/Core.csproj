@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="Models\Contact.cs" />
+    <Compile Include="Models\Events\ContactSelected.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ContactService.cs" />
     <Compile Include="ViewModels\ContactDetailsViewModel.cs" />

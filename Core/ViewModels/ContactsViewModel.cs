@@ -1,7 +1,9 @@
 using System.Collections.ObjectModel;
 using System.Windows.Input;
+using Cirrious.MvvmCross.Plugins.Messenger;
 using Cirrious.MvvmCross.ViewModels;
 using Core.Models;
+using Core.Models.Events;
 using Core.Services;
 
 namespace Core.ViewModels
@@ -10,11 +12,13 @@ namespace Core.ViewModels
 		: MvxViewModel
     {
         private readonly IContactService _contactService;
+        private readonly IMvxMessenger _messenger;
         private ObservableCollection<Contact> _contacts;
 
-        public ContactsViewModel(IContactService contactService)
+        public ContactsViewModel(IContactService contactService, IMvxMessenger messenger)
         {
             _contactService = contactService;
+            _messenger = messenger;
             OpenContactCommand = new MvxCommand<Contact>(OpenContact);
         }
 
@@ -33,7 +37,7 @@ namespace Core.ViewModels
 
         private void OpenContact(Contact contact)
         {
-            ShowViewModel<ContactDetailsViewModel>(new {contactId = contact.Id});
+            _messenger.Publish(new ContactSelected(this, contact.Id));
         }
     }
 }

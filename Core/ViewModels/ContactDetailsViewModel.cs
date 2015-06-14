@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Cirrious.MvvmCross.Plugins.Messenger;
 using Cirrious.MvvmCross.ViewModels;
 using Core.Models;
+using Core.Models.Events;
 using Core.Services;
 
 namespace Core.ViewModels
@@ -12,12 +9,13 @@ namespace Core.ViewModels
     public class ContactDetailsViewModel : MvxViewModel
     {
         private readonly IContactService _contactService;
-        private int contactId;
+        private int _contactId;
         private Contact _contact;
 
-        public ContactDetailsViewModel(IContactService contactService)
+        public ContactDetailsViewModel(IContactService contactService, IMvxMessenger messenger)
         {
             _contactService = contactService;
+            messenger.SubscribeOnMainThread<ContactSelected>(Handle);
         }
 
         public Contact Contact
@@ -28,12 +26,23 @@ namespace Core.ViewModels
 
         public void Init(int contactId)
         {
-            this.contactId = contactId;
+            _contactId = contactId;
         }
 
         public override void Start()
         {
-            Contact = _contactService.Get(contactId);
+            LoadContact();
+        }
+
+        private void LoadContact()
+        {
+            Contact = _contactService.Get(_contactId);
+        }
+
+        private void Handle(ContactSelected @event)
+        {
+            _contactId = @event.ContactId;
+            LoadContact();
         }
     }
 }
