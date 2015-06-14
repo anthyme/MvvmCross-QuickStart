@@ -84,6 +84,7 @@
     <CodesignKey>iPhone Distribution</CodesignKey>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Bootstrap\MessengerPluginBootstrap.cs" />
     <Compile Include="Converters\ContactFullNameConverter.cs" />
     <Compile Include="DebugTrace.cs" />
     <Compile Include="LinkerPleaseInclude.cs" />
@@ -126,6 +127,9 @@
     <Reference Include="Cirrious.MvvmCross.Localization">
       <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.5.1\lib\Xamarin.iOS10\Cirrious.MvvmCross.Localization.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Messenger">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Messenger.3.5.1\lib\Xamarin.iOS10\Cirrious.MvvmCross.Plugins.Messenger.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Touch">
       <HintPath>..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.5.1\lib\Xamarin.iOS10\Cirrious.MvvmCross.Touch.dll</HintPath>
